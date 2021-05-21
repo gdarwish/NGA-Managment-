@@ -1,0 +1,86 @@
+.btnMenu{
+    -jfx-button-type: FLAT;
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-pref-height:35;
+    -fx-pref-width:155;
+    -fx-alignment: center-left;
+    -fx-padding:0 0 0 20;
+
+}
+.addingBtn{
+    -jfx-button-type: FLAT;
+    -fx-background-color: #24babe;
+    -fx-text-fill: white;
+    -fx-pref-height:32;
+    -fx-font-size:17;
+    -fx-padding: 7 12 7 12;
+}
+.menuPanel{
+
+}
+.replaceable{
+    -fx-pref-width:950px;
+    -fx-pref-height:100%;
+    -fx-max-width:950px;
+    -fx-min-width:100%;
+    -fx-max-height:100%;
+    -fx-min-height:100%;
+}
+JFXColorPicker{
+    -fx-margin:20px;
+}
+.removeTaskBtn{
+    -fx-min-width: 10px;
+     -fx-background-radius: 5em;
+     -fx-min-height: 30px;
+     -fx-max-width: 30px;
+     -fx-font-size:20;
+     -fx-text-fill: #903;
+     -fx-max-height: 30px;
+}
+.whiteText{
+    -fx-text-fill:#fff;
+}
+.root {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-padding:10px 5px 10px 5px;
+    -fx-alignment: center;
+}
+.table-view .column-header,.table-view .column-header-background{
+    -fx-background-color:#eb6151;
+}
+.table-view .column-header-background .label{
+    -fx-padding:10px 5px 10px 5px;
+    -fx-text-fill:#fff;
+    -fx-font-family: 'Ubuntu', sans-serif;
+    -fx-font-size:16;
+    -fx-text-transform:uppercase;
+}
+.table-row-cell:odd{
+    -fx-background-color:#ebebeb;
+}
+.table-row-cell:selected{
+    -fx-background-color:#616161;
+}
+.background {
+    -fx-background-color: #fefefe;
+    -fx-background-radius: 10 0;
+}
+.table-view .table-row-cell {
+    -fx-cell-size: 50px;
+}
+.submitBtn{
+        -fx-padding:10px 5px 10px 5px;
+        -fx-background-color: #0275d8;
+        -fx-text-fill: white;
+        -fx-font-size:18;
+}
+.viewTitle{
+    -fx-font-family: 'Ubuntu', sans-serif;
+    -fx-margin-top:60;
+    -fx-font-size: 35;
+    -fx-fill: #24babe;
+}

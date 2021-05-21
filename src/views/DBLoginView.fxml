@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" styleClass="form-background" stylesheets="@../stylesheets/login_form.css" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DBLoginController">
+    <children>
+      <fx:include source="ToolBarView.fxml" />
+        <Label focusTraversable="true" text="Database Connection" textFill="#dadada">
+            <font>
+                <Font name="Comic Sans MS" size="20.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="25.0" />
+            </VBox.margin>
+        </Label>
+        <JFXTextField fx:id="dbHost" focusColor="#eb2256" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Host" styleClass="text-field" stylesheets="@../stylesheets/login_form.css" unFocusColor="#eeeeee">
+            <padding>
+                <Insets bottom="4.0" left="5.0" right="5.0" top="4.0" />
+            </padding>
+            <font>
+                <Font name="Oriya MN" size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="dbName" focusColor="#eb2256" labelFloat="true" layoutX="210.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Database" styleClass="text-field" stylesheets="@../stylesheets/login_form.css" unFocusColor="#eeeeee">
+            <padding>
+                <Insets bottom="4.0" left="5.0" right="5.0" top="4.0" />
+            </padding>
+            <font>
+                <Font name="Oriya MN" size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="dbUsername" focusColor="#eb2256" labelFloat="true" layoutX="210.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Username" styleClass="text-field" stylesheets="@../stylesheets/login_form.css" unFocusColor="#eeeeee">
+            <padding>
+                <Insets bottom="4.0" left="5.0" right="5.0" top="4.0" />
+            </padding>
+            <font>
+                <Font name="Oriya MN" size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="dbPassword" accessibleRole="PASSWORD_FIELD" focusColor="#eb2256" labelFloat="true" layoutX="210.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Password" styleClass="text-field" stylesheets="@../stylesheets/login_form.css" unFocusColor="#eeeeee">
+            <padding>
+                <Insets bottom="4.0" left="5.0" right="5.0" top="4.0" />
+            </padding>
+            <font>
+                <Font name="Oriya MN" size="14.0" />
+            </font>
+        </JFXPasswordField>
+      <JFXCheckBox fx:id="checkBox" checkedColor="#eb2256" mnemonicParsing="false" onAction="#rememberMe" text="Remeber me" textFill="#eeeeee">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Beirut Regular" size="14.0" />
+         </font>
+      </JFXCheckBox>
+        <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#connect" prefWidth="125.0" stylesheets="@../stylesheets/login_form.css" text="Connect" textFill="WHITE">
+            <font>
+                <Font name="Beirut Regular" size="16.0" />
+            </font>
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+    </children>
+</VBox>

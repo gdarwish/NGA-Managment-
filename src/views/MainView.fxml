@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <padding>
+        <Insets bottom="20" left="5" right="5" top="20" />
+    </padding>
+    <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background">
+         <children>
+              <fx:include source="ToolBarView.fxml" />
+
+              <HBox styleClass="mainPanel">
+                  <VBox spacing="10" styleClass="menuPanel" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                      <padding>
+                          <Insets bottom="5.0" left="10.0" top="55.0" />
+                      </padding>
+                          <children>
+                              <JFXButton fx:id="projectsButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Projects">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="BRIEFCASE" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="tasksButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Tasks">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="BARS" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="categoriesButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Categories">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="TH" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="statusButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Statuses">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="CHECK" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="prioritiesButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Priorities">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="LIST_ALT" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="statisticButton" buttonType="FLAT" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Statistic">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="AREA_CHART" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="creditButton" mnemonicParsing="false" onAction="#switchTable" styleClass="btnMenu" text="Credit">
+                                  <graphic>
+                                      <FontAwesomeIconView glyphName="INFO_CIRCLE" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                  </graphic>
+                                  <VBox.margin>
+                                      <Insets top="240.0" />
+                                  </VBox.margin>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </JFXButton>
+                             <JFXButton fx:id="logout" mnemonicParsing="false" onAction="#logout" styleClass="btnMenu" text="Logout">
+                                <graphic>
+                                   <FontAwesomeIconView glyphName="POWER_OFF" glyphSize="15" style="-fx-text-fill:white; -fx-fill:white;" />
+                                </graphic>
+                                <VBox.margin>
+                                   <Insets top="0.0" />
+                                </VBox.margin>
+                                <cursor>
+                                   <Cursor fx:constant="HAND" />
+                                </cursor>
+                             </JFXButton>
+                          </children>
+                  <HBox.margin>
+                     <Insets top="9.0" />
+                  </HBox.margin>
+                      </VBox>
+                  <VBox fx:id="tableContainer" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                      <padding>
+                          <Insets bottom="20" left="20" right="20" top="20" />
+                      </padding>
+                  </VBox>
+              </HBox>
+         </children>
+      </VBox>
+    </children>
+</Pane>

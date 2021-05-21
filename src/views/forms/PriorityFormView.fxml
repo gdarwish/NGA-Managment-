@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.forms.PrioritiesFormController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox xmlns:fx="http://javafx.com/fxml" fx:id="priorityFormGrid">
+
+        <HBox>
+            <Label fx:id="title" text="Add New Priority">
+                <font>
+                    <Font name="Arial" size="25"></Font>
+                </font>
+            </Label>
+        </HBox>
+        <HBox>
+            <Label text="Name" prefHeight="40" prefWidth="100"></Label>
+            <JFXTextField fx:id="name" prefWidth="300" prefHeight="40"/>
+        </HBox>
+        <HBox>
+            <padding>
+                <Insets top="20" right="0" bottom="0" left="0"/>
+            </padding>
+            <Label text="Color" prefHeight="40" prefWidth="100"></Label>
+            <JFXColorPicker fx:id="color" prefWidth="300" prefHeight="40"/>
+        </HBox>
+        <padding>
+            <Insets top="20" right="0" bottom="0" left="0"/>
+        </padding>
+        <JFXButton onAction="#processForm" fx:id="submitButton" text="Submit" buttonType="FLAT" prefWidth="200"
+                   prefHeight="40" style="-fx-background-color: #0275d8; -fx-text-fill: white;">
+            <padding>
+                <Insets top="8" right="20" bottom="8" left="20"/>
+            </padding>
+        </JFXButton>
+        <VBox fx:id="errorDisplay"/>
+    </VBox>
+</AnchorPane>

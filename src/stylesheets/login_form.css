@@ -1,0 +1,24 @@
+.toolbar {
+    -fx-background-color: #202326;
+    -fx-background-radius: 10 0 10 0;
+    -fx-effect: dropshadow(three-pass-box, #eb2256, 10, 0, 2, 0);
+}
+
+.form-background {
+    -fx-background-color: #2f3338;
+    -fx-background-radius: 10 0;
+}
+
+.text-field {
+    -fx-background-color: #3d4046;
+    -fx-text-inner-color: #dadada;
+    -fx-prompt-text-fill: #bababa;
+}
+
+.button {
+    -fx-background-color: #eb2256;
+}
+
+.drag {
+    -fx-cursor: closed_hand;
+}

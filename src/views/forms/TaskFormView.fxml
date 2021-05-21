@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.forms.TaskFormController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox xmlns:fx="http://javafx.com/fxml" fx:id="taskFormGrid">
+        <HBox>
+            <Label fx:id="title" text="Add new Task">
+                <font>
+                    <Font name="Arial" size="25"></Font>
+                </font>
+            </Label>
+        </HBox>
+        <HBox>
+            <Label text="Name" prefHeight="40" prefWidth="100"></Label>
+            <JFXTextField fx:id="name" prefWidth="300" prefHeight="40"/>
+        </HBox>
+        <HBox>
+            <Label text="Project" prefHeight="40" prefWidth="100"></Label>
+            <JFXComboBox fx:id="project" prefHeight="40" prefWidth="300" promptText="Select a Project">
+            </JFXComboBox>
+        </HBox>
+        <HBox fx:id="closeHBox">
+            <Label text="Open" prefHeight="40" prefWidth="100"></Label>
+            <JFXToggleButton fx:id="closeTask" size="12.0" toggleColor="#fafafa" toggleLineColor="#d70505" unToggleLineColor="#08f21b" wrapText="true" onAction="#on"/>
+        </HBox>
+        <padding>
+            <Insets top="20" right="0" bottom="0" left="0"/>
+        </padding>
+        <JFXButton styleClass="submitBtn" onAction="#processForm" fx:id="submitButton" text="Create Task" buttonType="FLAT" prefWidth="200"
+                   prefHeight="40" >
+            <padding>
+                <Insets top="8" right="20" bottom="8" left="20"/>
+            </padding>
+        </JFXButton>
+        <VBox fx:id="errorDisplay"/>
+    </VBox>
+
+</AnchorPane>

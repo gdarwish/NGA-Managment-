@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="parent" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TasksController">
+    <children>
+        <VBox fx:id="replaceable" alignment="TOP_RIGHT" spacing="5">
+            <HBox fx:id="topBar">
+                <children>
+                    <Text fx:id="viewTitle" styleClass="viewTitle" text="Task" />
+                </children>
+            </HBox>
+            <TableView fx:id="taskTable" styleClass="table-view" prefHeight="600.0">
+                <columns>
+                    <TableColumn fx:id="name" maxWidth="1000.0" minWidth="100.0" prefWidth="525.0" text="Name" />
+                    <TableColumn fx:id="project" prefWidth="300.0" text="Project" />
+                    <TableColumn fx:id="open" prefWidth="100.0" text="Open" />
+                    <TableColumn fx:id="edit" maxWidth="500.0" prefWidth="50.0" text="Edit" />
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</VBox>
